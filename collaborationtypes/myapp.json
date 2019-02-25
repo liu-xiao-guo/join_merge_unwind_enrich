@@ -1,0 +1,109 @@
+{
+  "active" : true,
+  "appType" : true,
+  "assembly" : {
+    "Enrich" : {
+      "configuration" : {
+        "associatedType" : "extra_info",
+        "childStreams" : null,
+        "foreignKeys" : [ {
+          "type" : "Property",
+          "value" : "id"
+        } ],
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "Enrich"
+    },
+    "Join" : {
+      "configuration" : {
+        "childStreams" : null,
+        "constraints" : [ {
+          "type" : "VAIL Expression",
+          "value" : "source1.id== source2.id"
+        } ],
+        "order" : null,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "upsert" : false,
+        "withinDuration" : null
+      },
+      "description" : null,
+      "pattern" : "Join"
+    },
+    "Merge" : {
+      "configuration" : {
+        "childStreams" : null,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "Merge"
+    },
+    "Unwind" : {
+      "configuration" : {
+        "childStreams" : null,
+        "outboundProperty" : "unwinded",
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "unwindProperty" : "heartrates",
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "Unwind"
+    },
+    "source1" : {
+      "configuration" : {
+        "childStreams" : [ "Enrich", "Merge", "Join" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/xiaoguo/topic1",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : "data_type1",
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "EventStream"
+    },
+    "source2" : {
+      "configuration" : {
+        "childStreams" : [ "Join", "Merge" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/xiaoguo/topic2",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : "data_type2",
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "EventStream"
+    },
+    "source3" : {
+      "configuration" : {
+        "childStreams" : [ "Unwind" ],
+        "inboundResource" : "topics",
+        "inboundResourceId" : "/xiaoguo/topic3",
+        "op" : null,
+        "outboundResource" : null,
+        "outboundResourceId" : null,
+        "schema" : null,
+        "upsert" : false
+      },
+      "description" : null,
+      "pattern" : "EventStream"
+    }
+  },
+  "collaboratorRoles" : [ ],
+  "currentState" : {
+    "code" : "success"
+  },
+  "description" : "",
+  "entityRoles" : [ ],
+  "keyTypes" : [ "system.collaborations" ],
+  "name" : "myapp"
+}

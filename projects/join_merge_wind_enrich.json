@@ -1,0 +1,225 @@
+{
+  "links" : [ {
+    "source" : "topic//xiaoguo/topic1",
+    "target" : "type/data_type1"
+  }, {
+    "source" : "topic//xiaoguo/topic2",
+    "target" : "type/data_type2"
+  }, {
+    "source" : "procedure/data_gen",
+    "target" : "topic//xiaoguo/topic1"
+  }, {
+    "source" : "procedure/data_gen",
+    "target" : "topic//xiaoguo/topic2"
+  }, {
+    "source" : "type/data_type1",
+    "target" : "app/myapp"
+  }, {
+    "source" : "type/data_type2",
+    "target" : "app/myapp"
+  }, {
+    "source" : "topic//xiaoguo/topic1",
+    "target" : "app/myapp"
+  }, {
+    "source" : "topic//xiaoguo/topic2",
+    "target" : "app/myapp"
+  }, {
+    "source" : "type/extra_info",
+    "target" : "app/myapp"
+  } ],
+  "name" : "join_merge_wind_enrich",
+  "options" : {
+    "description" : "",
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "custom",
+    "showGrid" : true,
+    "v" : 2
+  },
+  "resources" : [ {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "data_type1" ]
+    },
+    "label" : "/xiaoguo/topic1",
+    "name" : "/xiaoguo/topic1",
+    "node" : {
+      "x" : 232.5372459774568,
+      "y" : 176.21660198283874
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "data_type2" ]
+    },
+    "label" : "/xiaoguo/topic2",
+    "name" : "/xiaoguo/topic2",
+    "node" : {
+      "x" : 286.3836388751795,
+      "y" : 236.62477660147852
+    },
+    "type" : 10
+  }, {
+    "name" : "/xiaoguo/topic3",
+    "node" : {
+      "x" : 550.4519642180527,
+      "y" : 240.1528949555652
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out", "out" ],
+      "topics" : [ "/xiaoguo/topic1", "/xiaoguo/topic2" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "data_gen",
+    "name" : "data_gen",
+    "node" : {
+      "x" : 276.86807464706453,
+      "y" : 353.07241807870054
+    },
+    "timestamp" : "2019-02-25T09:22:44.589Z",
+    "type" : 3
+  }, {
+    "label" : "data_type",
+    "name" : "data_type",
+    "node" : {
+      "x" : 486.2153647393053,
+      "y" : 85.8409706499852
+    },
+    "timestamp" : "2019-02-25T09:37:25.724Z",
+    "type" : 1
+  }, {
+    "label" : "data_type1",
+    "name" : "data_type1",
+    "node" : {
+      "x" : 316.3373569497679,
+      "y" : 80.10532904018119
+    },
+    "timestamp" : "2019-02-25T09:20:19.927Z",
+    "type" : 1
+  }, {
+    "label" : "data_type2",
+    "name" : "data_type2",
+    "node" : {
+      "x" : 461.2126419510734,
+      "y" : 163.68246916646552
+    },
+    "timestamp" : "2019-02-25T09:20:11.514Z",
+    "type" : 1
+  }, {
+    "name" : "extra_info",
+    "node" : {
+      "x" : 373.6413183712462,
+      "y" : 381.25271952296157
+    },
+    "timestamp" : "2019-02-25T11:47:47.554Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "in", "in" ],
+      "topics" : [ "/xiaoguo/topic1", "/xiaoguo/topic2" ],
+      "typeHash" : [ "in", "in", "in" ],
+      "types" : [ "data_type1", "data_type2", "extra_info" ]
+    },
+    "label" : "myapp",
+    "name" : "myapp",
+    "node" : {
+      "x" : 444.16577724126256,
+      "y" : 264.200092280622
+    },
+    "timestamp" : "2019-02-25T11:52:07.021Z",
+    "type" : 12
+  } ],
+  "tools" : [ {
+    "isPinned" : false,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 20,
+      "y" : 20
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1,
+        "translate" : [ -59, -22 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "data_gen",
+    "pane" : {
+      "h" : 400,
+      "w" : 600,
+      "x" : 0,
+      "y" : 420
+    },
+    "resourceKey" : "procedure/data_gen",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "myapp",
+    "pane" : {
+      "h" : 500,
+      "w" : 870,
+      "x" : 610,
+      "y" : 0
+    },
+    "resourceKey" : "app/myapp",
+    "type" : 15
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorprocedure/data_gen", "app/myapp", "subsubscribeeditor/myapp_Merge", "subsubscribeeditor/myapp_Enrich" ]
+  } ]
+}

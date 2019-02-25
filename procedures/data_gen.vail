@@ -1,0 +1,26 @@
+PROCEDURE data_gen()
+
+var msg1 = {}
+msg1.id = 1
+msg1.a = 2
+msg1.b = 3
+
+PUBLISH msg1 to TOPIC "/xiaoguo/topic1" 
+
+var msg2 = {}
+msg2.id = 1
+msg2.a = 4
+msg2.b = 5
+
+PUBLISH msg2 to TOPIC "/xiaoguo/topic2" 
+
+var msg3 = {
+    "name": "joe",
+    "heartrates": [
+        {"ts": "2017-09-07T23:45:13.573Z", "value": 60}, 
+        {"ts": "2017-09-07T23:46:14.512Z", "value": 65}, 
+        {"ts": "2017-09-07T23:51:11.513Z", "value": 90}
+    ]
+}
+
+PUBLISH msg3 to TOPIC "/xiaoguo/topic3"
